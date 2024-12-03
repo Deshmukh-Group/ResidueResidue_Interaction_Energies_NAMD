@@ -20,7 +20,7 @@ module load Anaconda3
 source activate docking
 
 # Calculate the residue pairs that are within 20 angstroms of each other
-# python3 calc_interact_res_pairs.py dry.psf dry.dcd 20 0.6
+# python3 calc_interact_res_pairs.py dry.psf dry.dcd 20 60
 
 # Define the number of groups to split the residue pairs into (same as number of cores: ntasks)
 num_groups=$SLURM_NTASKS
