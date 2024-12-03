@@ -12,7 +12,7 @@ output_dir="residue_pair_data"
 mkdir -p "$output_dir"
 
 # Calculate the residue pairs that are within 20 angstroms of each other
-#python3 calc_interact_res_pairs.py dry.psf dry_stride_5.dcd 20
+#python3 calc_interact_res_pairs.py dry.psf dry_stride_5.dcd 20 60
 
 # Loop through residue pairs from residue_pairs.dat
 while IFS=',' read -r res1 res2; do
