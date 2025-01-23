@@ -47,8 +47,8 @@ This repository provides a pipeline for identifying and analyzing residue-residu
   - <percentage_cutoff>: Minimum percentage of trajectory frames a residue pair must meet the cutoff.
   
   Outputs:
-  residue_pairs.dat: List of residue pairs meeting criteria.
-  residue_pairs_distances.csv: Residue pairs with average distances and standard deviations.
+  - residue_pairs.dat: List of residue pairs meeting criteria.
+  - residue_pairs_distances.csv: Residue pairs with average distances and standard deviations.
   
   2. Energy Calculation with NAMD
   - Use the provided SLURM script to calculate interaction energies for residue pairs in parallel:
