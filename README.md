@@ -41,10 +41,10 @@ This repository provides a pipeline for identifying and analyzing residue-residu
   - Example: python3 calc_interact_res_pairs.py dry.psf dry.dcd 20 60
   
   Arguments:
-  <topology.psf>: Path to the topology file.
-  <trajectory.dcd>: Path to the trajectory file.
-  <cutoff_distance>: Distance cutoff in Ångstroms.
-  <percentage_cutoff>: Minimum percentage of trajectory frames a residue pair must meet the cutoff.
+    - <topology.psf>: Path to the topology file.
+    - <trajectory.dcd>: Path to the trajectory file.
+    - <cutoff_distance>: Distance cutoff in Ångstroms.
+    - <percentage_cutoff>: Minimum percentage of trajectory frames a residue pair must meet the cutoff.
   
   Outputs:
   residue_pairs.dat: List of residue pairs meeting criteria.
