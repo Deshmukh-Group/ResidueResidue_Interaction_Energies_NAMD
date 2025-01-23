@@ -63,13 +63,14 @@ Runs NAMD to compute interaction energies.
 Aggregates energy statistics into res_res_energy.dat.
 
 Output Files
-residue_pairs.dat: Contains residue pairs identified within the cutoff.
-residue_pairs_distances.csv: Average distances and standard deviations for residue pairs.
-res_res_energy.dat: Summary of interaction energies:
+- residue_pairs.dat: Contains residue pairs identified within the cutoff.
+- residue_pairs_distances.csv: Average distances and standard deviations for residue pairs.
+- res_res_energy.dat: Summary of interaction energies:
 Columns: Residue1, Residue2, Average_VDW, Average_Electrostatics, Average_Total_Energy.
 Group-Specific Logs:
-Per-residue pair interaction energy steps (*_energy_steps.csv).
-SLURM Script Configuration
+- Per-residue pair interaction energy steps (*_energy_steps.csv).
+  
+### SLURM Script Configuration
 Before submitting the SLURM script, update the following:
 
 Partition: Replace normal_q with your cluster's partition name.
