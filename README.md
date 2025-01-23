@@ -35,7 +35,7 @@ This repository provides a pipeline for identifying and analyzing residue-residu
 **Parameter File:** CHARMM parameter file (e.g., par_all36m_prot.prm).
 
 ### Usage
-  1. Residue Pair Detection
+  **1. Residue Pair Detection**
   - Run the Python script to identify residue pairs within a specified distance cutoff:
   - python3 calc_interact_res_pairs.py <topology.psf> <trajectory.dcd> <cutoff_distance> <percentage_cutoff>
   - Example: python3 calc_interact_res_pairs.py dry.psf dry.dcd 20 60
@@ -50,7 +50,7 @@ This repository provides a pipeline for identifying and analyzing residue-residu
   - residue_pairs.dat: List of residue pairs meeting criteria.
   - residue_pairs_distances.csv: Residue pairs with average distances and standard deviations.
   
-  2. Energy Calculation with NAMD
+  **2. Energy Calculation with NAMD**
   - Use the provided SLURM script to calculate interaction energies for residue pairs in parallel:
   - sbatch energy_calculation.sh
 
