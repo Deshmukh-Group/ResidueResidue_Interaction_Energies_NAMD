@@ -1,7 +1,5 @@
 # ResidueResidue_Interaction_Energies_NAMD
 
-# Residue Pair Interaction Analysis Pipeline
-
 This repository provides a pipeline for identifying and analyzing residue-residue interactions in molecular dynamics (MD) trajectories. The workflow includes distance-based residue pair selection, computation of average interaction distances, and subsequent energy calculations using NAMD.
 
 ---
