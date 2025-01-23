@@ -73,9 +73,9 @@ Group-Specific Logs:
 ### SLURM Script Configuration
 Before submitting the SLURM script, update the following:
 
-Partition: Replace normal_q with your cluster's partition name.
-Account: Replace swarnadeep with your HPC account name.
-Number of Tasks: Ensure --ntasks matches the number of CPU cores available.
+ - Partition: Replace normal_q with your cluster's partition name.
+ - Account: Replace swarnadeep with your HPC account name.
+ - Number of Tasks: Ensure --ntasks matches the number of CPU cores available.
 
 ###  License
 This repository is licensed under the MIT License. See LICENSE for details.
