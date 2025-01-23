@@ -30,30 +30,31 @@ This repository provides a pipeline for identifying and analyzing residue-residu
    conda activate residue_analysis
 
 ### Input Files
-** Topology File: Protein structure file without waters and ions (e.g., dry.psf).
-** Trajectory File: Molecular dynamics trajectory file without waters and ions (e.g., dry.dcd).
-** Parameter File: CHARMM parameter file (e.g., par_all36m_prot.prm).
+**Topology File:** Protein structure file without waters and ions (e.g., dry.psf).
+**Trajectory File:** Molecular dynamics trajectory file without waters and ions (e.g., dry.dcd).
+**Parameter File:** CHARMM parameter file (e.g., par_all36m_prot.prm).
 
 ### Usage
-1. Residue Pair Detection
-Run the Python script to identify residue pairs within a specified distance cutoff:
-python3 calc_interact_res_pairs.py <topology.psf> <trajectory.dcd> <cutoff_distance> <percentage_cutoff>
-Example: python3 calc_interact_res_pairs.py dry.psf dry.dcd 20 60
+  1. Residue Pair Detection
+  - Run the Python script to identify residue pairs within a specified distance cutoff:
+  - python3 calc_interact_res_pairs.py <topology.psf> <trajectory.dcd> <cutoff_distance> <percentage_cutoff>
+  - Example: python3 calc_interact_res_pairs.py dry.psf dry.dcd 20 60
+  
+  Arguments:
+  <topology.psf>: Path to the topology file.
+  <trajectory.dcd>: Path to the trajectory file.
+  <cutoff_distance>: Distance cutoff in Ångstroms.
+  <percentage_cutoff>: Minimum percentage of trajectory frames a residue pair must meet the cutoff.
+  
+  Outputs:
+  residue_pairs.dat: List of residue pairs meeting criteria.
+  residue_pairs_distances.csv: Residue pairs with average distances and standard deviations.
+  
+  2. Energy Calculation with NAMD
+  - Use the provided SLURM script to calculate interaction energies for residue pairs in parallel:
+  - sbatch energy_calculation.sh
 
-Arguments:
-<topology.psf>: Path to the topology file.
-<trajectory.dcd>: Path to the trajectory file.
-<cutoff_distance>: Distance cutoff in Ångstroms.
-<percentage_cutoff>: Minimum percentage of trajectory frames a residue pair must meet the cutoff.
-Outputs:
-residue_pairs.dat: List of residue pairs meeting criteria.
-residue_pairs_distances.csv: Residue pairs with average distances and standard deviations.
-
-2. Energy Calculation with NAMD
-Use the provided SLURM script to calculate interaction energies for residue pairs in parallel:
-sbatch energy_calculation.sh
-
-Script Details:
+### Script Details:
 Splits residue_pairs.dat into groups for parallel processing.
 
 For each residue pair:
